@@ -11,11 +11,6 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from rag.rag_service import RagSummarizeService
-from rag.retrieval import HybridRetrievalService
-from rag.vector_store import VectorStoreService
-
-
 @dataclass
 class EvalStats:
     total: int
@@ -348,6 +343,11 @@ def main():
         action="store_true",
         help="启用回答级评测（会调用RAG回答链路）",
     )
+    parser.add_argument(
+        "--schema-only",
+        action="store_true",
+        help="仅校验评测集schema，不加载RAG/Embedding在线依赖，适合CI smoke检查",
+    )
     args = parser.parse_args()
 
     dataset_path = Path(args.dataset)
@@ -355,6 +355,14 @@ def main():
     details_path = Path(args.details)
 
     dataset = load_dataset(dataset_path)
+    if args.schema_only:
+        print(f"dataset_schema_ok: {len(dataset)} cases")
+        return
+
+    from rag.rag_service import RagSummarizeService
+    from rag.retrieval import HybridRetrievalService
+    from rag.vector_store import VectorStoreService
+
     vs = VectorStoreService()
     baseline_retriever = vs.get_retriever()
     hybrid_retriever = HybridRetrievalService(vs.vector_store)
@@ -363,10 +371,6 @@ def main():
     production_res = evaluate("production_hybrid_retrieval", dataset, hybrid_retriever.retrieve)
     answer_res = None
     if args.with_answer_eval:
-        # 评测场景下关闭RAG提示词回显，避免终端输出过长。
-        import rag.rag_service as rag_service_module
-
-        rag_service_module.print_prompt = lambda prompt: prompt
         rag_service = RagSummarizeService()
         answer_res = evaluate_answers(dataset, rag_service.rag_summarize)
 

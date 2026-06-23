@@ -7,6 +7,10 @@ on:
 jobs:
   quality-and-smoke:
     runs-on: ubuntu-latest
+    env:
+      DASHSCOPE_API_KEY: test_dashscope_api_key
+      AMAP_WEB_SERVICE_KEY: test_amap_web_service_key
+      ZST_USER_LOCATION: 南京
 
     steps:
       - name: Checkout
@@ -33,4 +37,4 @@ jobs:
 
       - name: Eval smoke
         run: |
-          python eval/run_eval.py
+          python eval/run_eval.py --schema-only
