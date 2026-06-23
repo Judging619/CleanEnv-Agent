@@ -1,0 +1,51 @@
+services:
+  jiejing-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: jiejing-agent-api
+    ports:
+      - "8000:8000"
+    environment:
+      DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
+      AMAP_WEB_SERVICE_KEY: ${AMAP_WEB_SERVICE_KEY:-}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:///./data/zst_enterprise.db}
+      REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+      API_RATE_LIMIT_PER_MINUTE: ${API_RATE_LIMIT_PER_MINUTE:-60}
+      ZST_USER_ID: ${ZST_USER_ID:-1001}
+      ZST_USER_LOCATION: ${ZST_USER_LOCATION:-南京}
+    volumes:
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  jiejing-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jiejing-agent-web
+    ports:
+      - "8501:8501"
+    environment:
+      DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
+      AMAP_WEB_SERVICE_KEY: ${AMAP_WEB_SERVICE_KEY:-}
+      ZST_BACKEND_URL: ${ZST_BACKEND_URL:-http://jiejing-api:8000}
+      ZST_USER_ID: ${ZST_USER_ID:-1001}
+      ZST_USER_LOCATION: ${ZST_USER_LOCATION:-南京}
+    volumes:
+      - ./logs:/app/logs
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data
+    depends_on:
+      - jiejing-api
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: jiejing-agent-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped

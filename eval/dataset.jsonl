@@ -1,0 +1,30 @@
+{"id": "Q001", "query": "扫地机器人首次使用前要做哪些准备？", "expected_sources": ["扫地机器人100问2", "扫地机器人100问.pdf"], "expected_keywords": ["充满电", "建图", "清扫区域"]}
+{"id": "Q002", "query": "机器人开机后不移动，应该先检查什么？", "expected_sources": ["扫地机器人100问2", "故障排除"], "expected_keywords": ["驱动轮", "万向轮", "缠绕"]}
+{"id": "Q003", "query": "为什么机器人会找不到充电座？", "expected_sources": ["扫地机器人100问2", "故障排除"], "expected_keywords": ["充电座", "障碍物", "传感器"]}
+{"id": "Q004", "query": "APP连接不上机器人该怎么排查？", "expected_sources": ["扫地机器人100问2", "故障排除"], "expected_keywords": ["2.4G", "WiFi", "重启"]}
+{"id": "Q005", "query": "建图错乱、地图不完整通常怎么处理？", "expected_sources": ["扫地机器人100问2", "故障排除"], "expected_keywords": ["删除旧地图", "重新建图", "反光物"]}
+{"id": "Q006", "query": "扫完地还有灰尘碎屑，怎么提升清洁效果？", "expected_sources": ["扫地机器人100问2", "维护保养"], "expected_keywords": ["主刷", "滤网", "吸力"]}
+{"id": "Q007", "query": "拖地后有明显水痕，要怎么调整？", "expected_sources": ["扫地机器人100问2", "扫拖一体机器人100问", "故障排除"], "expected_keywords": ["出水量", "拖布", "水痕"]}
+{"id": "Q008", "query": "主刷一般多久更换一次比较合适？", "expected_sources": ["扫地机器人100问2", "维护保养", "扫地机器人100问.pdf"], "expected_keywords": ["主刷", "3-6个月", "更换"]}
+{"id": "Q009", "query": "HEPA滤网能不能水洗，多久更换？", "expected_sources": ["扫地机器人100问2", "扫地机器人100问.pdf", "选购指南"], "expected_keywords": ["HEPA", "3-6个月", "水洗"]}
+{"id": "Q010", "query": "地毯场景应该选择多大吸力的机器人？", "expected_sources": ["选购指南", "扫地机器人100问.pdf"], "expected_keywords": ["地毯", "吸力", "4000Pa"]}
+{"id": "Q011", "query": "带宠物家庭选扫地机器人要重点看什么配置？", "expected_sources": ["选购指南", "扫地机器人100问2", "维护保养"], "expected_keywords": ["宠物", "防缠绕", "吸力"]}
+{"id": "Q012", "query": "激光导航和视觉导航有什么差异？", "expected_sources": ["扫地机器人100问.pdf", "选购指南"], "expected_keywords": ["激光导航", "视觉导航", "精度"]}
+{"id": "Q013", "query": "扫拖一体机可以只拖地不扫地吗？", "expected_sources": ["扫拖一体机器人100问"], "expected_keywords": ["仅拖地", "APP", "模式"]}
+{"id": "Q014", "query": "扫拖一体机器人如何设置先扫后拖？", "expected_sources": ["扫拖一体机器人100问"], "expected_keywords": ["先扫后拖", "自定义清扫", "吸力"]}
+{"id": "Q015", "query": "水箱漏水一般要检查哪些部件？", "expected_sources": ["扫拖一体机器人100问", "故障排除"], "expected_keywords": ["水箱盖", "密封圈", "出水管"]}
+{"id": "Q016", "query": "电动拖布不旋转时先做哪些处理？", "expected_sources": ["扫拖一体机器人100问", "故障排除"], "expected_keywords": ["缠绕", "电机", "重启"]}
+{"id": "Q017", "query": "厨房重油污地面如何用扫拖一体机处理？", "expected_sources": ["扫拖一体机器人100问"], "expected_keywords": ["大吸力", "清洁液", "多次拖扫"]}
+{"id": "Q018", "query": "木地板拖地时出水量应该怎么设置？", "expected_sources": ["扫拖一体机器人100问", "选购指南"], "expected_keywords": ["木地板", "低档出水", "积水"]}
+{"id": "Q019", "query": "机器人清扫时频繁碰撞家具，可能是什么原因？", "expected_sources": ["故障排除", "扫地机器人100问2"], "expected_keywords": ["传感器", "防撞条", "灰尘"]}
+{"id": "Q020", "query": "机器人续航明显下降，维护上有什么建议？", "expected_sources": ["故障排除", "扫地机器人100问2", "维护保养"], "expected_keywords": ["电池", "满充满放", "更换"]}
+{"id": "Q021", "query": "机器人噪音突然变大，通常从哪些地方检查？", "expected_sources": ["故障排除", "维护保养"], "expected_keywords": ["主刷", "边刷", "异响"]}
+{"id": "Q022", "query": "扫地机器人日常充电触点该如何保养？", "expected_sources": ["维护保养"], "expected_keywords": ["充电触点", "干布", "氧化"]}
+{"id": "Q023", "query": "机器人长期不用时电池如何保存？", "expected_sources": ["扫地机器人100问2", "维护保养"], "expected_keywords": ["50%-70%", "阴凉干燥", "补电"]}
+{"id": "Q024", "query": "防跌落传感器日常维护建议有哪些？", "expected_sources": ["维护保养", "故障排除"], "expected_keywords": ["防跌落传感器", "擦拭", "平整地面"]}
+{"id": "Q025", "query": "多楼层户型选购机器人时最重要的功能是什么？", "expected_sources": ["选购指南", "扫地机器人100问.pdf"], "expected_keywords": ["多楼层地图", "地图存储", "切换"]}
+{"id": "Q026", "query": "选择自动集尘机型时有哪些关键参数？", "expected_sources": ["选购指南", "维护保养"], "expected_keywords": ["自动集尘", "集尘袋容量", "密封"]}
+{"id": "Q027", "query": "机器人无法跨越门槛，可能怎么解决？", "expected_sources": ["故障排除", "选购指南"], "expected_keywords": ["门槛高度", "越障", "驱动轮"]}
+{"id": "Q028", "query": "尘盒多久清理一次更合理？", "expected_sources": ["扫地机器人100问2", "扫地机器人100问.pdf", "维护保养"], "expected_keywords": ["尘盒", "2-3天", "每次清理"]}
+{"id": "Q029", "query": "机器人漏扫边角区域，优先检查什么？", "expected_sources": ["扫地机器人100问2", "故障排除", "维护保养"], "expected_keywords": ["边刷", "沿边清扫", "传感器"]}
+{"id": "Q030", "query": "拖布发臭应该怎么清洗和预防？", "expected_sources": ["扫拖一体机器人100问", "维护保养"], "expected_keywords": ["拖布", "清洗", "除味"]}

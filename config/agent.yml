@@ -1,0 +1,5 @@
+external_data_path: data/external/records.csv
+default_user_id: "1001"
+default_user_location: "南京"
+amap_web_service_key: "ee1085a4c842c9d4699b3b8274ecc207"
+amap_timeout_seconds: 8

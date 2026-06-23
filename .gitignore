@@ -1,0 +1,34 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Runtime artifacts
+logs/
+chroma_db/
+agent/chroma_db/
+rag/chroma_db/
+data/sessions.json
+data/zst_enterprise.db
+*.db
+*.sqlite
+*.sqlite3
+*.rdb
+
+# Evaluation artifacts
+eval/metrics_report.md
+eval/metrics_details.json
+dump.rdb
